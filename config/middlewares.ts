@@ -15,8 +15,11 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'script-src': ['https://cdn.ckeditor.com'],
-          'connect-src': ['https://proxy-event.ckeditor.com']
+          'script-src': ['https://cdn.ckeditor.com', "'self'", "'unsafe-inline'", "apollo-server-landing-page.cdn.apollographql.com"],
+          'connect-src': ['https://proxy-event.ckeditor.com', "'self'", "https:", "apollo-server-landing-page.cdn.apollographql.com"],
+          "img-src": ["'self'", "data:", "blob:", "apollo-server-landing-page.cdn.apollographql.com"],
+          "style-src": ["'self'", "'unsafe-inline'", "apollo-server-landing-page.cdn.apollographql.com"],
+          "frame-src": ["sandbox.embed.apollographql.com"]
         },
       },
     },

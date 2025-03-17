@@ -1,5 +1,6 @@
 import Icon from "./extensions/icon.png";
 import Logo from "./extensions/logo.svg";
+import './global.css';
 
 export default {
   config: {
